@@ -1,6 +1,10 @@
-## Classification algorithms (SpamClassifier)
+### Classification algorithms (SpamClassifier)
 
 > Here are our exercises of implementing classification algorithms in Python using sci-kit learn and other libraries.
+
+<img width=100% src="https://github.com/ahmdrz/spam-classifier/raw/master/resources/spam-classifier.png">
+
+Image is from [developers.google.com](https://developers.google.com/machine-learning/guides/text-classification/images/TextClassificationExample.png)
 
 #### Dataset
 
