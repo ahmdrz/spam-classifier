@@ -8,9 +8,7 @@ Image is from [developers.google.com](https://developers.google.com/machine-lear
 
 #### Dataset
 
-> We used standard dataset named `spambase`. You can find it in our repository or [here](http://archive.ics.uci.edu/ml/datasets/spambase).
-
-###### Sample
+> We used standard dataset named `spambase`. You can find it in dataset directory of our repository.
 
 #### Algorithms
 
