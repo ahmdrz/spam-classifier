@@ -19,3 +19,8 @@
 #### Results
 
 > The result of the algorithms will be shown here.
+
+#### Authors
+
+1. Nastaran Kiani (`no github address`)
+2. Ahmadreza Zibaei ([@ahmdrz](https://github.com/ahmdrz))
