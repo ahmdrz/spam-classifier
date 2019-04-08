@@ -18,6 +18,8 @@ Image is from [developers.google.com](https://developers.google.com/machine-lear
 4. SVM
 5. Random forest
 
+TODO: **With neural-networks**
+
 #### Results
 
 The result contains the confusion matrix and the accuracy of each algorithm and will be available in the results directory.
