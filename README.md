@@ -20,7 +20,7 @@ Image is from [developers.google.com](https://developers.google.com/machine-lear
 
 #### Results
 
-> The result of the algorithms will be shown here.
+The result contains the confusion matrix and the accuracy of each algorithm and will be available in the results directory.
 
 #### Authors
 
