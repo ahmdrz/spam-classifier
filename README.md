@@ -20,8 +20,8 @@ You can see `DOCUMENT.md` for more information.
 To run this program without installing python3 and other libraries/dependencies, you can run our docker image.
 
 ```bash
-$ docker pull ahmdrz/spamclassifier:latest
-$ docker run ahmdrz/spamclassifier:latest
+$ docker pull ahmdrz/spam-classifier:latest
+$ docker run ahmdrz/spam-classifier:latest
 ```
 
 #### Dataset
