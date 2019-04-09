@@ -56,6 +56,10 @@ The configuration of each classifier listed below
 
 We used [confusion_matrix_pretty_print.py](https://github.com/wcipriano/pretty-print-confusion-matrix/blob/master/confusion_matrix_pretty_print.py) to generate this figure.
 
+kNN | SVM | Naive-Bayes | Random-Forest | Decision-Tree
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/ahmdrz/spam-classifier/raw/master/results/knn/fig-1.png)  |  ![](https://github.com/ahmdrz/spam-classifier/raw/master/results/svm/fig-1.png) |  ![](https://github.com/ahmdrz/spam-classifier/raw/master/results/naive-bayes/fig-1.png) |  ![](https://github.com/ahmdrz/spam-classifier/raw/master/results/random-forest/fig-1.png) |  ![](https://github.com/ahmdrz/spam-classifier/raw/master/results/decision-tree/fig-1.png)
+
 #### Authors
 
 1. Nastaran Kiani (`no github address`)
