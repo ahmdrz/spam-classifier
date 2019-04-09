@@ -119,5 +119,5 @@ if __name__ == "__main__":
         all_accuracies_list,
         y_labels=all_labels,
         title='The accuracy graph for {} classifier(s).'.format(
-            current_classifier)
+            args["classifier"])
     )
