@@ -4,7 +4,7 @@ import os
 import sys
 import time
 import numpy as np
-from classifier.visualize import draw_chart
+from classifier.visualize import draw_chart, draw_matrix
 from random import shuffle
 from classifier import Classifier
 from classifier.cross_validation import kfold_cross_validation
@@ -89,6 +89,9 @@ if __name__ == "__main__":
     selected_classifiers = classifiers if args["classifier"] == 'all' else [
         args["classifier"]]
 
+    draw_confusion_matrix = args["classifier"] != "all"
+    confusion_matrix = None
+
     all_accuracies_list = []
     all_labels = []
     for current_classifier in selected_classifiers:
@@ -104,6 +107,9 @@ if __name__ == "__main__":
             samples, labels = parse_samples_labels(test)
             accuracy = classifier.accuracy(samples, labels)
             print("+ [{:02d}/10] accuracy: {:3d}%".format(i+1, int(accuracy*100)))
+
+            if draw_confusion_matrix:
+                confusion_matrix = classifier.confusion_matrix(samples, labels)            
 
             accuracy_list.append(accuracy)
 
@@ -121,3 +127,6 @@ if __name__ == "__main__":
         title='The accuracy graph for {} classifier(s).'.format(
             args["classifier"])
     )
+
+    if draw_confusion_matrix:
+        draw_matrix(confusion_matrix)

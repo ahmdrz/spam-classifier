@@ -8,3 +8,4 @@
 6. [Decision Tree](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 7. [Data Visualization in Python — Line Graph in Matplotlib](https://medium.com/python-pandemonium/data-visualization-in-python-line-graph-in-matplotlib-9dfd0016d180)
 8. [#122 Multiple lines chart](https://python-graph-gallery.com/122-multiple-lines-chart/)
+9. [Confusion matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)

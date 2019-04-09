@@ -53,6 +53,10 @@ The configuration of each classifier listed below
 3. n_estimators in RandomForest: 6
 4. all others were in the default configuration.
 
+Confusion matrix for kNN with k=6:
+
+<img width=100% src="https://github.com/ahmdrz/spam-classifier/raw/master/resources/confusion-matrix.png">
+
 #### Authors
 
 1. Nastaran Kiani (`no github address`)

@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from .pretty_matrix import pretty_plot_confusion_matrix
+from pandas import DataFrame
 
 
 def draw_chart(x, y_list, title=None, x_label='x-axis', y_label='y-axis', y_labels=None):
@@ -13,3 +15,8 @@ def draw_chart(x, y_list, title=None, x_label='x-axis', y_label='y-axis', y_labe
     plt.ylim(bottom=min(y) / 2, top=max(y) * 1.5)
     plt.legend()
     plt.show()
+
+
+def draw_matrix(data):
+    data = DataFrame(data)
+    pretty_plot_confusion_matrix(data)
