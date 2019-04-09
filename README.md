@@ -57,6 +57,8 @@ Confusion matrix for kNN with k=6:
 
 <img width=100% src="https://github.com/ahmdrz/spam-classifier/raw/master/resources/confusion-matrix.png">
 
+We used [confusion_matrix_pretty_print.py](https://github.com/wcipriano/pretty-print-confusion-matrix/blob/master/confusion_matrix_pretty_print.py) to generate this figure.
+
 #### Authors
 
 1. Nastaran Kiani (`no github address`)
