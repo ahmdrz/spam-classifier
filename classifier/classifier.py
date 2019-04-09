@@ -10,11 +10,11 @@ class Classifier:
         self._selected_classifier = classifier
         
         if classifier == 'knn':
-            self.classifier = KNeighborsClassifier()
+            self.classifier = KNeighborsClassifier(n_neighbors=6)
         elif classifier == 'svm':
-            self.classifier = SVC(gamma='auto')
+            self.classifier = SVC(gamma='auto', C=2.0)
         elif classifier == 'random-forest':
-            self.classifier = RandomForestClassifier(n_estimators=10)
+            self.classifier = RandomForestClassifier(n_estimators=6)
         elif classifier == 'naive-bayes':
             self.classifier = GaussianNB()
         elif classifier == 'decision-tree':
