@@ -89,6 +89,8 @@ if __name__ == "__main__":
     selected_classifiers = classifiers if args["classifier"] == 'all' else [
         args["classifier"]]
 
+    all_accuracies_list = []
+    all_labels = []
     for current_classifier in selected_classifiers:
         print("~ Running program with {} classifier.".format(current_classifier))
         classifier = Classifier(current_classifier)
@@ -105,8 +107,17 @@ if __name__ == "__main__":
 
             accuracy_list.append(accuracy)
 
-        print("- Took {:.2f} seconds.".format(time.time() - start_time))
-        print("~ Drawing chart to visualize accuracy list ...")
+        all_accuracies_list.append(accuracy_list)
+        all_labels.append(current_classifier)
 
-        draw_chart(range(len(accuracy_list)), accuracy_list,
-                   title='The accuracy graph for {} classifier.'.format(current_classifier))
+        print("- Took {:.2f} seconds.".format(time.time() - start_time))
+
+    print("~ Drawing chart to visualize accuracy list ...")
+
+    draw_chart(
+        range(len(all_accuracies_list[0])),
+        all_accuracies_list,
+        y_labels=all_labels,
+        title='The accuracy graph for {} classifier(s).'.format(
+            current_classifier)
+    )
