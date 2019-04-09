@@ -12,7 +12,7 @@ def draw_chart(x, y_list, title=None, x_label='x-axis', y_label='y-axis', y_labe
         plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
-    plt.ylim(bottom=min(y) / 2, top=max(y) * 1.5)
+    plt.ylim(bottom=0.5, top=1.1)
     plt.legend()
     plt.show()
 

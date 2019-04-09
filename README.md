@@ -62,5 +62,5 @@ kNN | SVM | Naive-Bayes | Random-Forest | Decision-Tree
 
 #### Authors
 
-1. Nastaran Kiani (`no github address`)
+1. Nastaran Kiani ([@Nastarankiani](https://github.com/Nastarankiani))
 2. Ahmadreza Zibaei ([@ahmdrz](https://github.com/ahmdrz))
