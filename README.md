@@ -1,6 +1,8 @@
 ### Classification algorithms (SpamClassifier)
 
-> Here are our exercises of implementing classification algorithms in Python using sci-kit learn and other libraries. It written in Python-3.6.7. Dependencies are available in `requirements.txt` file. You may have to install tkinter. Follow this instruction:
+> Here are our exercises of implementing classification algorithms in Python using sci-kit learn. 
+
+It written in Python-3.6.7. Dependencies are available in `requirements.txt` file. You may have to install tkinter. Follow this instruction:
 
 ```
 $ # on the debian-based OS like Ubuntu
@@ -12,6 +14,15 @@ $ sudo apt-get install python3-tk
 Image is from [developers.google.com](https://developers.google.com/machine-learning/guides/text-classification/images/TextClassificationExample.png)
 
 You can see `DOCUMENT.md` for more information.
+
+#### Docker
+
+To run this program without installing python3 and other libraries/dependencies, you can run our docker image.
+
+```bash
+$ docker pull ahmdrz/spamclassifier:latest
+$ docker run ahmdrz/spamclassifier:latest
+```
 
 #### Dataset
 
