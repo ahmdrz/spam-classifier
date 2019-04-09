@@ -42,9 +42,9 @@ TODO: **With neural-networks**
 
 The result contains the confusion matrix and the accuracy of each algorithm and will be available in the results directory.
 
-Accuracy graph:
-
-<img width=100% src="https://github.com/ahmdrz/spam-classifier/raw/master/resources/figure-1.png">
+Accuracy graph             |  Confusion matrix for kNN with k=6
+:-------------------------:|:-------------------------:
+![](https://github.com/ahmdrz/spam-classifier/raw/master/resources/figure-1.png)  |  ![](https://github.com/ahmdrz/spam-classifier/raw/master/resources/confusion-matrix.png)
 
 The configuration of each classifier listed below
 
@@ -53,9 +53,6 @@ The configuration of each classifier listed below
 3. n_estimators in RandomForest: 6
 4. all others were in the default configuration.
 
-Confusion matrix for kNN with k=6:
-
-<img width=100% src="https://github.com/ahmdrz/spam-classifier/raw/master/resources/confusion-matrix.png">
 
 We used [confusion_matrix_pretty_print.py](https://github.com/wcipriano/pretty-print-confusion-matrix/blob/master/confusion_matrix_pretty_print.py) to generate this figure.
 
