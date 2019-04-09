@@ -58,6 +58,13 @@ def parse_args():
         help="k in kfold cross validation",
         default=10,
     )
+    parser.add_argument(
+        "-s",
+        "--save",
+        help="save charts",
+        default=False,
+        action='store_true'
+    )
     args = vars(parser.parse_args())
 
     if not file_exist(args["dataset"]):
@@ -75,8 +82,14 @@ def parse_args():
     return args
 
 
+def chart_file(save, algorithm, name):
+    if not save:
+        return None
+    
+    return 'chart-{}-{}.png'.format(algorithm, name)
+
 if __name__ == "__main__":
-    args = parse_args()
+    args = parse_args()       
 
     print("~ Reading dataset file ...")
     dataset = read_dataset(args["dataset"])
@@ -106,7 +119,9 @@ if __name__ == "__main__":
 
             samples, labels = parse_samples_labels(test)
             accuracy = classifier.accuracy(samples, labels)
-            print("+ [{:02d}/10] accuracy: {:3d}%".format(i+1, int(accuracy*100)))
+            
+            if args["verbose"]:
+                print("+ [{:02d}/10] accuracy: {:3d}%".format(i+1, int(accuracy*100)))
 
             if draw_confusion_matrix:
                 confusion_matrix = classifier.confusion_matrix(samples, labels)            
@@ -116,7 +131,8 @@ if __name__ == "__main__":
         all_accuracies_list.append(accuracy_list)
         all_labels.append(current_classifier)
 
-        print("- Took {:.2f} seconds.".format(time.time() - start_time))
+        if args["verbose"]:
+            print("- Took {:.2f} seconds.".format(time.time() - start_time))
 
     print("~ Drawing chart to visualize accuracy list ...")
 
@@ -125,8 +141,9 @@ if __name__ == "__main__":
         all_accuracies_list,
         y_labels=all_labels,
         title='The accuracy graph for {} classifier(s).'.format(
-            args["classifier"])
+            args["classifier"]),
+        save_to=chart_file(args["save"], args["classifier"], 'accuracy')
     )
 
     if draw_confusion_matrix:
-        draw_matrix(confusion_matrix)
+        draw_matrix(confusion_matrix, save_to=chart_file(args["save"], args["classifier"], 'matrix'))
